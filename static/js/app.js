@@ -14,7 +14,7 @@ function buildCharts(sample) {
         console.log(values);
         // Draw a horizontal chart using plotly and the json data
 
-        let barData = [
+        let barChart = [
             {
                 y: ids.slice(0, 10).map(otuId => `OTU ${otuId}`).reverse(),
                 x: values.slice(0, 10).reverse(),
@@ -31,17 +31,19 @@ function buildCharts(sample) {
 
         let barLayout = {
             title: "Top 10 OTU",
-            margin: { t: 50, l: 125, b:50},
+            margin: { t: 50, l: 100, b:50, r: 30},
             width: 600,
             height: 400,
+            paper_bgcolor:'rgb(243, 243, 243)',
+            plot_bgcolor:'rgb(243, 243, 243)',
             
         };
 
-        Plotly.newPlot("bar", barData, barLayout);
+        Plotly.newPlot("bar", barChart, barLayout);
 
                 // Build a Bubble Chart using the sample data
 
-                let DataBubble = [
+                let bubbleChart = [
                     {
                         x: ids,
                         y: values,
@@ -54,14 +56,16 @@ function buildCharts(sample) {
                         }
                     }
                 ];
-                let LayoutBubble = {
-                    margin: { t: 0 },
+                let bubbleLayout = {
+                    margin: { t: 30, r: 30, l: 60 },
                     xaxis: { title: "OTU ID" },
                     hovermode: "closest",
-                    showlegend: false
+                    showlegend: false,
+                    paper_bgcolor:'rgb(243, 243, 243)',
+                    plot_bgcolor:'rgb(243, 243, 243)',
                 };
         
-                Plotly.plot("bubble", DataBubble, LayoutBubble);
+                Plotly.plot("bubble", bubbleChart, bubbleLayout);
 
 
 
