@@ -39,6 +39,30 @@ function buildCharts(sample) {
 
         Plotly.newPlot("bar", barData, barLayout);
 
+                // Build a Bubble Chart using the sample data
+
+                let DataBubble = [
+                    {
+                        x: ids,
+                        y: values,
+                        text: labels,
+                        mode: "markers",
+                        marker: {
+                            color: ids,
+                            size: values,
+                            
+                        }
+                    }
+                ];
+                let LayoutBubble = {
+                    margin: { t: 0 },
+                    xaxis: { title: "OTU ID" },
+                    hovermode: "closest",
+                    showlegend: false
+                };
+        
+                Plotly.plot("bubble", DataBubble, LayoutBubble);
+
 
 
 
