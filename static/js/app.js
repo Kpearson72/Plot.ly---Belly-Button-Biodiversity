@@ -51,7 +51,7 @@ function buildCharts(sample) {
                         text: labels,
                         mode: "markers",
                         marker: {
-                            color: ids, // the color is the same as the ids values number
+                            color: ids, // uses the ids for color - loved it so kept it as color theme
                             size: values, // the size equals y values   
                         },
                         type: 'scatter'
@@ -75,15 +75,23 @@ function buildCharts(sample) {
 
     });
 }
-buildCharts(940);
 
+// construct data to be used in Demographic Info Panel
+function buildMetadata(sample) {
+    // Use d3 to read samples.json
+    d3.json("data/samples.json").then((data) => {
+        let metadata = data.metadata;
+        console.log(metadata);
+    });
+}
+
+// Function to Collect names of OTU/Bind names to Section tag with options using id selDataset 
 function init() {
-
-
     // Use a list of names from names
     d3.json("data/samples.json").then((data) => {
         let sampleNames = data.names;
         console.log("sampleNames", sampleNames);
+        // bind - data to well under select with id selDataset
         sampleNames.forEach((sample)=>{
             d3.select("#selDataset")
                 .append("option")
@@ -94,9 +102,12 @@ function init() {
         // Use the first sample from the list to build the initial plots
         // have sample1 as a constant variable to keep when initiated
         const sample1 = sampleNames[0];
+        console.log("sample1",sample1);
         buildCharts(sample1);
     });
 }
+
+// Function to change data each time to update charts
 function optionChanged(newSample) {
     // Fetch new data each time a new sample is selected
     buildCharts(newSample);
