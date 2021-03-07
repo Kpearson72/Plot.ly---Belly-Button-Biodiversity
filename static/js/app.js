@@ -1,3 +1,23 @@
+// Function to construct data to be used in Demographic Info Panel
+function buildMetadata(sample) {
+    // Use d3 to read samples.json
+    d3.json("data/samples.json").then((data) => {
+        let metadata = data.metadata;
+        let resultsArr = metadata.filter(sampleObject => sampleObject.id == sample);
+        console.log('resultsArr', resultsArr);
+        console.log(`resultsArr: ${resultsArr}`);
+        let result = resultsArr[0];
+        console.log(resultsArr[0]);
+        let panelBody = d3.select("#sample-metadata");
+        // empty the panel in html before appending key, value pairs
+        panelBody.html("");
+        Object.entries(result).forEach(([key, value]) => {
+            d3.select("#sample-metadata")
+                .append("h4")
+                .text(`${key}: ${value}`);
+        });
+    });
+}
 function buildCharts(sample) {
 
     // Use `d3.json` to fetch the sample data for the plots
@@ -76,14 +96,26 @@ function buildCharts(sample) {
     });
 }
 
-// construct data to be used in Demographic Info Panel
-function buildMetadata(sample) {
-    // Use d3 to read samples.json
-    d3.json("data/samples.json").then((data) => {
-        let metadata = data.metadata;
-        console.log(metadata);
-    });
-}
+// // Function to construct data to be used in Demographic Info Panel
+// function buildMetadata(sample) {
+//     // Use d3 to read samples.json
+//     d3.json("data/samples.json").then((data) => {
+//         let metadata = data.metadata;
+//         let resultsArr = metadata.filter(sampleObject => sampleObject.id == sample);
+//         console.log('resultsArr', resultsArr);
+//         console.log(`resultsArr: ${resultsArr}`);
+//         let result = resultsArr[0];
+//         console.log(resultsArr[0]);
+//         let panelBody = d3.select("#sample-metadata");
+//         // empty the panel in html before appending key, value pairs
+//         panelBody.html("");
+//         Object.entries(result).forEach(([key, value]) => {
+//             d3.select("#sample-metadata")
+//                 .append("h4")
+//                 .text(`${key}: ${value}`);
+//         });
+//     });
+// }
 
 // Function to Collect names of OTU/Bind names to Section tag with options using id selDataset 
 function init() {
@@ -104,6 +136,7 @@ function init() {
         const sample1 = sampleNames[0];
         console.log("sample1",sample1);
         buildCharts(sample1);
+        buildMetadata(firstSample);
     });
 }
 
@@ -111,5 +144,6 @@ function init() {
 function optionChanged(newSample) {
     // Fetch new data each time a new sample is selected
     buildCharts(newSample);
+    buildMetadata(newSample);
 }
 init();
