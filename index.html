@@ -7,54 +7,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/js/style.css">
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron jumbotron-billboard text-center">
+        <div class = "img"></div>
         <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <h3>Use the interactive charts below to explore the dataset</h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)">
-            <option value = "940">940</option>
-            <option value = "940">941</option>
-            <option value = "940">942</option>
-            <option value = "940">943</option>
-            <option value = "940">944</option>
-            <option value = "940">945</option>
-            <option value = "940">946</option>
-            <option value = "940">947</option>
-            <option value = "940">948</option>
-            <option value = "940">949</option>
-          </select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+    <div class = "container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="well">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)">--Select--</select>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">Demographic Info</h4>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div id="bar"></div>
+        </div>
+        <div class="col-md-2">
+          <div id="gauge"></div>
         </div>
       </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
+      <div class="row">
+        <br>
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
+  
+  <!-- </div> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>

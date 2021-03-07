@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(219, 240, 233);
+}
+
+/* .jumbotron p {
+    font-weight: 500;
+    color: rgb(6, 2, 20)
+    
+}
+
+.jumbotron h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    
+} */
+
+.jumbotron-billboard .img {
+    margin-bottom: 0px;
+    opacity: 0.2;
+    color: black;
+    background: #000 url("http://robdunnlab.com/wp-content/uploads/microbes-sem.jpg") top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.jumbotron h2 {margin-top:0;}
+.jumbotron {
+    position:relative;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:50px;
+    color: darkslategrey;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.jumbotron .container {
+    position:relative;
+    z-index:2;
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron {
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+}
+
+.panel {
+    color:rgb(182, 53, 44);
+    font-size: 70%;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color:rgb(192, 118, 113);
+    color: white;
+    border-color:darkgrays;
+    font-size: 70%;
+}
+.panel-title {
+    font-size: medium;
+}
+
