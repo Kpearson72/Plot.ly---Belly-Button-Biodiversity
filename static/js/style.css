@@ -44,10 +44,18 @@ body {
     z-index:2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .jumbotron {
         padding-top:20px;
         padding-bottom:20px;
+    }
+    img {
+        margin-bottom: -5px;
+        width: 10%;
+        max-width: 40px;
+        min-width: 30px;
+        height: auto;
+        margin-left: 70%;
     }
 
 }
@@ -79,4 +87,5 @@ img {
     min-width: 60px;
     height: auto;
     margin-left: 70%;
-  }
+}
+

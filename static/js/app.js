@@ -92,8 +92,9 @@ function init() {
 
         });
         // Use the first sample from the list to build the initial plots
-        const firstSample = sampleNames[0];
-        buildCharts(firstSample);
+        // have sample1 as a constant variable to keep when initiated
+        const sample1 = sampleNames[0];
+        buildCharts(sample1);
     });
 }
 function optionChanged(newSample) {
