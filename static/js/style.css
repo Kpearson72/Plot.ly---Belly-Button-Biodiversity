@@ -89,3 +89,11 @@ img {
     margin-left: 70%;
 }
 
+select:active, select:hover {
+    outline-color:rgb(197,53,50,.7);
+
+}
+:focus {
+    outline: rgb(197,53,50,.7) auto 1px;
+}
+
