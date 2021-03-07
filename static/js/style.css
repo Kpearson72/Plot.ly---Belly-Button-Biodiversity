@@ -1,5 +1,6 @@
 body {
     background-color: rgb(219, 240, 233);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* .jumbotron p {
@@ -56,13 +57,25 @@ body {
 }
 
 .panel > .panel-heading {
-    background-image: none;
-    background-color:rgb(192, 118, 113);
+    background-image:none;
+    background-color:rgb(197,53,50,.7);
     color: white;
     border-color:darkgrays;
     font-size: 70%;
+    
 }
 .panel-title {
     font-size: medium;
 }
+.panel-body {
+    background-color: rgb(240, 240, 240);
+}
 
+img {
+    margin-bottom: -25px;
+    width: 20%;
+    max-width: 85px;
+    min-width: 60px;
+    height: auto;
+    margin-left: 70%;
+  }

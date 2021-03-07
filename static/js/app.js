@@ -32,7 +32,7 @@ function buildCharts(sample) {
 
         let barLayout = {
             title: "Top 10 Operational Taxonomic Units (OTU)",
-            xaxis: {gridcolor: 'rgb(255,255,255)'},
+            xaxis: {gridcolor: 'rgb(255,255,255)', gridwidth: 1.4},
             margin: { t: 50, l: 100, b:50, r: 30},
             width: 600,
             height: 400,
@@ -59,8 +59,8 @@ function buildCharts(sample) {
                 ];
                 let bubbleLayout = {
                     title: "Individual's Demographic Information",
-                    xaxis: {title: "OTU ID", gridcolor: 'rgb(255,255,255)'},
-                    yaxis: {gridcolor: 'rgb(255,255,255)'},
+                    xaxis: {title: "OTU ID", gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
+                    yaxis: {gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
                     hovermode: "closest",
                     showlegend: false,
                     paper_bgcolor:'rgb(240, 240, 240)',
