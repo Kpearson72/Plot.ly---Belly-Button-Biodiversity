@@ -76,3 +76,28 @@ function buildCharts(sample) {
     });
 }
 buildCharts(940);
+
+function init() {
+
+
+    // Use a list of names from names
+    d3.json("data/samples.json").then((data) => {
+        let sampleNames = data.names;
+        console.log("sampleNames", sampleNames);
+        sampleNames.forEach((sample)=>{
+            d3.select("#selDataset")
+                .append("option")
+                .text(sample)
+                .property("value", sample); 
+
+        });
+        // Use the first sample from the list to build the initial plots
+        const firstSample = sampleNames[0];
+        buildCharts(firstSample);
+    });
+}
+function optionChanged(newSample) {
+    // Fetch new data each time a new sample is selected
+    buildCharts(newSample);
+}
+init();
