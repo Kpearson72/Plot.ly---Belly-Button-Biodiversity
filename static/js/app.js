@@ -39,7 +39,7 @@ function buildCharts(sample) {
             paper_bgcolor:'rgb(240, 240, 240)',
             plot_bgcolor:'rgb(240, 240, 240)',
         };
-
+        var config = {responsive: true}
         Plotly.newPlot("bar", barChart, barLayout);
 
                 // Build a Bubble Chart using the sample data
@@ -67,7 +67,7 @@ function buildCharts(sample) {
                     plot_bgcolor:'rgb(240, 240, 240)',
                     margin: { t: 30, r: 30, l: 60 },
                 };
-        
+                var config = {responsive: true}
                 Plotly.plot("bubble", bubbleChart, bubbleLayout);
 
 
