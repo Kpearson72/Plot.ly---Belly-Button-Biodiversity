@@ -4,17 +4,14 @@ function buildMetadata(sample) {
     d3.json("data/samples.json").then((data) => {
         let metadata = data.metadata;
         let resultsArr = metadata.filter(sampleObject => sampleObject.id == sample);
-        console.log('resultsArr', resultsArr);
         console.log(`resultsArr: ${resultsArr}`);
         let result = resultsArr[0];
         console.log(resultsArr[0]);
-        let panelBody = d3.select("#sample-metadata");
+        let PANEL = d3.select("#sample-metadata");
         // empty the panel in html before appending key, value pairs
-        panelBody.html("");
+        PANEL.html("");
         Object.entries(result).forEach(([key, value]) => {
-            d3.select("#sample-metadata")
-                .append("h4")
-                .text(`${key}: ${value}`);
+            d3.select("#sample-metadata").append("h4").text(`${key}: ${value}`);
         });
     });
 }
@@ -64,31 +61,31 @@ function buildCharts(sample) {
 
                 // Build a Bubble Chart using the sample data
 
-                let bubbleChart = [
-                    {
-                        x: ids,
-                        y: values,
-                        text: labels,
-                        mode: "markers",
-                        marker: {
-                            color: ids, // uses the ids for color - loved it so kept it as color theme
-                            size: values, // the size equals y values   
-                        },
-                        type: 'scatter'
-                    }
-                ];
-                let bubbleLayout = {
-                    title: "Individual's Demographic Information",
-                    xaxis: {title: "OTU ID", gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
-                    yaxis: {gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
-                    hovermode: "closest",
-                    showlegend: false,
-                    paper_bgcolor:'rgb(240, 240, 240)',
-                    plot_bgcolor:'rgb(240, 240, 240)',
-                    margin: { t: 30, r: 30, l: 60 },
-                };
-                var config = {responsive: true}
-                Plotly.plot("bubble", bubbleChart, bubbleLayout);
+        let bubbleChart = [
+            {
+                x: ids,
+                y: values,
+                text: labels,
+                mode: "markers",
+                marker: {
+                    color: ids, // uses the ids for color - loved it so kept it as color theme
+                    size: values, // the size equals y values   
+                },
+                type: 'scatter'
+            }
+        ];
+        let bubbleLayout = {
+            title: "Individual's Demographic Information",
+            xaxis: {title: "OTU ID", gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
+            yaxis: {gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
+            hovermode: "closest",
+            showlegend: false,
+            paper_bgcolor:'rgb(240, 240, 240)',
+            plot_bgcolor:'rgb(240, 240, 240)',
+            margin: { t: 30, r: 30, l: 60 },
+        };
+        // var config = {responsive: true}
+        Plotly.newPlot("bubble", bubbleChart, bubbleLayout);
 
 
 
@@ -96,26 +93,6 @@ function buildCharts(sample) {
     });
 }
 
-// // Function to construct data to be used in Demographic Info Panel
-// function buildMetadata(sample) {
-//     // Use d3 to read samples.json
-//     d3.json("data/samples.json").then((data) => {
-//         let metadata = data.metadata;
-//         let resultsArr = metadata.filter(sampleObject => sampleObject.id == sample);
-//         console.log('resultsArr', resultsArr);
-//         console.log(`resultsArr: ${resultsArr}`);
-//         let result = resultsArr[0];
-//         console.log(resultsArr[0]);
-//         let panelBody = d3.select("#sample-metadata");
-//         // empty the panel in html before appending key, value pairs
-//         panelBody.html("");
-//         Object.entries(result).forEach(([key, value]) => {
-//             d3.select("#sample-metadata")
-//                 .append("h4")
-//                 .text(`${key}: ${value}`);
-//         });
-//     });
-// }
 
 // Function to Collect names of OTU/Bind names to Section tag with options using id selDataset 
 function init() {
@@ -136,7 +113,7 @@ function init() {
         const sample1 = sampleNames[0];
         console.log("sample1",sample1);
         buildCharts(sample1);
-        buildMetadata(firstSample);
+        buildMetadata(sample1);
     });
 }
 
