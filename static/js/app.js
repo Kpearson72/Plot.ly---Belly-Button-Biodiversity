@@ -82,7 +82,7 @@ function buildCharts(sample) {
             showlegend: false,
             paper_bgcolor:'rgb(240, 240, 240)',
             plot_bgcolor:'rgb(240, 240, 240)',
-            margin: { t: 30, r: 30, l: 60 },
+            margin: { t: 50, r: 30, l: 60, b: 50},
         };
         // var config = {responsive: true}
         Plotly.newPlot("bubble", bubbleChart, bubbleLayout);
