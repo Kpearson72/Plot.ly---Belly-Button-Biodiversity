@@ -43,6 +43,10 @@ function buildCharts(sample) {
                 orientation: "h",
                 marker: {
                     color: 'rgba(217,97,73,.7)',
+                    line: {
+                        color: 'rgb(255,255,255)',
+                        width: 1.5
+                    }
                 }
             };
 
