@@ -33,7 +33,7 @@ function buildCharts(sample) {
 
         // Draw a horizontal chart using plotly and the json data
 
-        let barChart = [
+        let trace1= 
             {
                 // add a .slice to grab only the top 10 otu_ids, values, and labels
                 y: ids.slice(0, 10).map(otuId => `OTU ${otuId}`).reverse(),
@@ -44,8 +44,8 @@ function buildCharts(sample) {
                 marker: {
                     color: 'rgba(217,97,73,.7)',
                 }
-            }
-        ];
+            };
+
 
         let barLayout = {
             title: "Top 10 Operational Taxonomic Units (OTU)",
@@ -53,15 +53,16 @@ function buildCharts(sample) {
             margin: { t: 50, l: 100, b:50, r: 30},
             width: 600,
             height: 400,
-            paper_bgcolor:'rgb(240, 240, 240)',
-            plot_bgcolor:'rgb(240, 240, 240)',
+            paper_bgcolor:'rgb(238, 238, 238)',
+            plot_bgcolor:'rgb(238, 238, 238)',
         };
-        var config = {responsive: true}
-        Plotly.newPlot("bar", barChart, barLayout);
+        
+        let config = {responsive: true}
+        Plotly.newPlot("bar", [trace1], barLayout);
 
                 // Build a Bubble Chart using the sample data
 
-        let bubbleChart = [
+        let trace2 = 
             {
                 x: ids,
                 y: values,
@@ -72,20 +73,20 @@ function buildCharts(sample) {
                     size: values, // the size equals y values   
                 },
                 type: 'scatter'
-            }
-        ];
+            };
+
         let bubbleLayout = {
             title: "Individual's Demographic Information",
             xaxis: {title: "OTU ID", gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
             yaxis: {gridcolor: 'rgb(255,255,255)',gridwidth: 1.4},
             hovermode: "closest",
             showlegend: false,
-            paper_bgcolor:'rgb(240, 240, 240)',
-            plot_bgcolor:'rgb(240, 240, 240)',
+            paper_bgcolor:'rgb(238, 238, 238)',
+            plot_bgcolor:'rgb(238, 238, 238)',
             margin: { t: 50, r: 30, l: 60, b: 50},
         };
         // var config = {responsive: true}
-        Plotly.newPlot("bubble", bubbleChart, bubbleLayout);
+        Plotly.newPlot("bubble", [trace2], bubbleLayout);
 
 
 
