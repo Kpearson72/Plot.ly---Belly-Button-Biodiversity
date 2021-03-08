@@ -127,9 +127,28 @@ select:active, select:hover {
     padding-right: 50px;
     text-align: center;
     
+    
 }
 
-.text-block p {
-    font-size: 20px;
+@media screen and (min-width: 601px) {
+    .text-block #sub-header {
+        font-size: 200%;
+    }
+    .text-block #headerText {
+        font-size: 400%;
+    }
 }
+headerText
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .text-block #sub-header {
+        font-size: 10%;
+    }
+    .text-block #headerTexts {
+        font-size: 10%;
+    }
+
+}
+
+
 /* style="width:100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%); */
