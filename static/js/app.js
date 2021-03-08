@@ -76,7 +76,8 @@ function buildCharts(sample) {
                     color: ids, // uses the ids for color - loved it so kept it as color theme
                     size: values, // the size equals y values   
                 },
-                type: 'scatter'
+                type: 'scatter',
+                
             };
 
         let bubbleLayout = {
@@ -88,16 +89,12 @@ function buildCharts(sample) {
             paper_bgcolor:'rgb(238, 238, 238)',
             plot_bgcolor:'rgb(238, 238, 238)',
             margin: { t: 50, r: 30, l: 60, b: 50},
+            fig:{responsive: true}
         };
-        // var config = {responsive: true}
+        // let fig = {responsive: true};
         Plotly.newPlot("bubble", [trace2], bubbleLayout);
-
-
-
-
     });
 }
-
 
 // Function to Collect names of OTU/Bind names to Section tag with options using id selDataset 
 function init() {
