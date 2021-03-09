@@ -1,64 +1,9 @@
 body {
-    background-color: rgb(219, 238, 233);
+    background-color: rgb(211, 233, 226);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* .jumbotron p {
-    font-weight: 500;
-    color: rgb(6, 2, 20)
-    
-}
 
-.jumbotron h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: black;
-    
-} */
-
-/* .jumbotron {
-    margin-bottom: 0px;
-    opacity: 0.80;
-    background-image: url('http://robdunnlab.com/wp-content/uploads/microbes-sem.jpg') top center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-}
-.jumbotron h2 {margin-top:0;}
-.jumbotron {
-    position:relative;
-    padding-top:50px;
-    padding-bottom:80px;
-    padding-left:50px;
-    color: rgb(29, 44, 44);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 25px;
-}
-.jumbotron .container {
-    position:relative;
-    z-index:2;
-}
-
-@media screen and (max-width: 600px) {
-    .jumbotron {
-        padding-top:20px;
-        padding-bottom:20px;
-    }
-    img {
-        margin-bottom: -5px;
-        width: 10%;
-        max-width: 40px;
-        min-width: 30px;
-        height: auto;
-        margin-left: 70%;
-    }
-
-} */
 
 .panel {
     color:rgb(197,53,50,.7);
@@ -100,20 +45,17 @@ select:active, select:hover {
 /* Container holding the image and the text */
 #Microbes {
     position: relative;
-    color: rgb(219, 238, 233);
+    color: rgb(219, 230, 233);
     padding-bottom: 10px;
     padding-left:0%;
     padding-right:0%;
     overflow: hidden;
     margin-bottom:20px;
-
-    
 }
 
 #Microbes img {
     margin: -15% 0;
     opacity: 0.4;
-    
 }
 
 /* .text-block {
@@ -122,7 +64,7 @@ select:active, select:hover {
     left:40%;
     margin: -70px 0 0 -170px;
     background-color: rgb(197,53,50,.7);
-    color:  rgb(219, 238, 233);
+    color:  rgb(219, 230, 233);
     padding-left: 50px;
     padding-right: 50px;
     text-align: center;
@@ -131,48 +73,147 @@ select:active, select:hover {
     
 } */
 .res-circle {
-    width: 380px;
-    height: 380px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    color: rgb(219, 238, 233);;
+    color: rgb(219, 230, 233);;
     background: rgb(197,53,50,.7);
     position:absolute;
-    top: 13%;
+    top: 15%;
     left:30%;
-    margin: -30px 0 0 180px;
+    margin: -50px 0 0 75px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 10px;
+    /* box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125); */
 }
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* .res-circle::after {
+    content: "";
+    display: block;
+    padding-bottom: 10px;
+}
+.res-circle::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+} */
+
 #headerText {
-    line-height: 65px;
+    line-height: 55px;
     font-size: 50px;
     text-align: center;
+    margin: 20px 15px 10px;
+    font-size:3.5vw;
+    
 }
 #sub-header {
-    line-height: 20px;
+    line-height: 25px;
     font-size: 17px;
     text-align: center;
+    display: block;
+    font-size:1.5vw;
 }
-/* @media screen and (min-width: 601px) {
-    .text-block #sub-header {
-        font-size: 200%;
-    }
-    .text-block #headerText {
-        font-size: 300%;
-    }
-} */
+
+
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-    .text-block #sub-header {
-        font-size: 90%;
+    .res-circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position:absolute;
+    margin-left: -55px;
     }
-    .text-block #headerTexts {
-        font-size: 10%;
+    #headerText {
+    line-height: 20px;
+   
+    text-align: center;
+    margin-left: 10px;
+    margin-top:45px;
+    margin-bottom:0px;
+    font-size: 5.8vw;
+    
+    }
+    #sub-header {
+        line-height: 10px;
+        font-size: 17px;
+        text-align: center;
+        display: block;
+        font-size:2.8vw;
+        margin-left: 0px;
+    }
+    img #bacteria {
+        margin-bottom: -5px;
+        width: 10%;
+        max-width: 40px;
+
+        height: auto;
+        margin-left: 70%;
+    }
+    img #Microbes {
+        margin-bottom: -5px;
+        max-width: 100%;
+        height: auto;
+        margin-left: 150px;
     }
 
-}
+} 
+
+/* @media screen and (max-width: 768px) {
+    .res-circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position:absolute;
+    margin-left:-10px;
+    }
+    #headerText {
+    line-height: 38px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top:30px;
+    margin-bottom:0px;
+    font-size: 4.3vw;
+    
+    }
+    #sub-header {
+        line-height: 15px;
+        font-size: 17px;
+        text-align: center;
+        display: block;
+        font-size:1.8vw;
+        margin-left: 0px;
+    }
+    img #bacteria {
+        margin-bottom: -5px;
+        width: 20px;
+        min-width: 20px;
+        height: auto;
+        margin-left: 7px;
+    }
+    img #Microbes {
+        margin-bottom: -5px;
+        max-width: 100%;
+        height: auto;
+        margin-left: 50px;
+    }
+
+    .panel > .panel-heading {
+        background-image:none;
+        background-color:rgb(197,53,50,.7);
+        color: white;
+        border-color:darkgrays;
+        font-size: 40%;
+        
+    }
+
+}  */
 
 
 /* style="width:100%; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%); */
