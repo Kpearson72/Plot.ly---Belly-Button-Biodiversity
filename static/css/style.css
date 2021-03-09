@@ -60,15 +60,15 @@ select:active, select:hover {
 @media screen and (min-width: 768px){
 
     .res-circle {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
         border-radius: 50%;
         color: rgb(219, 230, 233);;
         background: rgb(197,53,50,.7);
         position:absolute;
         top: 15%;
         left:32%;
-        margin-left: 50px;
+        margin-left: -5px;
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 10px;
@@ -82,7 +82,7 @@ select:active, select:hover {
         font-size: 50px;
         text-align: center;
         margin: 50px 15px 10px;
-        font-size:2.7vw;
+        font-size:2.9vw;
         
     } 
     #sub-header {
@@ -140,19 +140,19 @@ select:active, select:hover {
 
 @media screen and (max-width: 768px) {
     .res-circle{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     position:absolute;
-    margin-left:-70px;
+    margin-left: -20px;
     }
     #headerText {
     line-height: 28px;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 40px;
     margin-top:60px;
     margin-bottom:0px;
-    font-size: 3.3vw;
+    font-size: 1.8vw;
     
     }
     #sub-header {
@@ -160,7 +160,7 @@ select:active, select:hover {
         font-size: 17px;
         text-align: center;
         display: block;
-        font-size:1.8vw;
+        font-size:.7vw;
         margin-left: 0px;
     }
     img #bacteria {
