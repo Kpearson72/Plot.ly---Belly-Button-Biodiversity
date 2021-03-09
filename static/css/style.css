@@ -73,40 +73,7 @@ select:active, select:hover {
     padding-bottom: 10px;
     /* box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125); */
 }
-/* .jumbotron {
-    position: relative;
-    height: 350px;
-    padding: 20px;
-    margin: 20px;
-    background-image: url("../Images/microbes-sem.jpg");
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-    opacity: 0.4;
-    
-} */
 
-
-/* .text-block {
-    position: absolute;
-    top: 50%;
-    left:40%;
-    margin: -70px 0 0 -170px;
-    background-color: rgb(197,53,50,.7);
-    color:  rgb(219, 230, 233);
-    padding-left: 50px;
-    padding-right: 50px;
-    text-align: center;
-    border-radius: 25px;
-    
-    
-} */
-
-/* .container-fluid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}  */
 
 
 #headerText {
