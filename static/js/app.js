@@ -61,7 +61,7 @@ function buildCharts(sample) {
             plot_bgcolor:'rgb(238, 238, 238)',
         };
         
-        // let config = {responsive: true}
+
         Plotly.newPlot("bar", [trace1], barLayout);
 
                 // Build a Bubble Chart using the sample data
@@ -91,7 +91,7 @@ function buildCharts(sample) {
             margin: { t: 50, r: 30, l: 60, b: 50},
             
         };
-        // let fig = {responsive: true};
+
         Plotly.newPlot("bubble", [trace2], bubbleLayout);
     });
 }

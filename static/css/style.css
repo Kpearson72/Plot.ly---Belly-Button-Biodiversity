@@ -3,8 +3,6 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-
 .panel {
     color:rgb(197,53,50,.7);
     font-size: 70%;
@@ -24,15 +22,6 @@ body {
 .panel-body {
     background-color: rgb(238, 238, 238);
 }
-
-/* img #bacteria {
-    margin-bottom: -25px;
-    width: 20%;
-    max-width: 85px;
-    min-width: 60px;
-    height: auto;
-    margin-left: 70%;
-} */
 
 select:active, select:hover {
     outline-color:rgb(197,53,50,.7);
@@ -72,10 +61,7 @@ select:active, select:hover {
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 10px;
-        /* box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125); */
     }
-
-
 
     #headerText {
         line-height: 50px;
@@ -93,50 +79,6 @@ select:active, select:hover {
         font-size:1.3vw;
     }
 }
-
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-/* @media screen and (max-width: 600px) {
-    .res-circle{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    position:absolute;
-    margin-left:-55px;
-    }
-    #headerText {
-    line-height: 20px;
-    text-align: center;
-    margin-left: 10px;
-    margin-top:45px;
-    margin-bottom:0px;
-    font-size: 5.8vw;
-    
-    }
-    #sub-header {
-        line-height: 10px;
-        font-size: 17px;
-        text-align: center;
-        display: block;
-        font-size:2.8vw;
-        margin-left: 0px;
-    }
-    img #bacteria {
-        margin-bottom: -5px;
-        width: 10%;
-        max-width: 40px;
-
-        height: auto;
-        margin-left: 70%;
-    }
-    img #Microbes {
-        margin-bottom: -5px;
-        max-width: 100%;
-        height: auto;
-        margin-left: 150px;
-    }
-
-}  */
 
 @media screen and (max-width: 768px) {
     .res-circle{
