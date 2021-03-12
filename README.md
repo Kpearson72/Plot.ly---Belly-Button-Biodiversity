@@ -14,6 +14,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 4. Displaying the sample metadata, i.e., an individual's demographic information.
 5. Displaying each key-value pair from the metadata JSON object somewhere on the page.
 6. Updating all of the plots any time that a new sample is selected.
+7. As a Bonus, adapt a Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the weekly washing frequency of the individual. Also, modify the code to include values and update whenever a new sample is selected.
 
 Here's the JavaScript code I used to build the charts and bind the data in the index.html - [`app.js`](https://github.com/Kpearson72/Plot.ly---Belly-Button-Biodiversity/blob/main/static/js/app.js)
 
