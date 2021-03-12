@@ -3,7 +3,7 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #gauge {
-    margin:0 20px 50px 45px;
+    margin:0px 20px 50px 45px;
     
 }
 .panel {
@@ -89,7 +89,7 @@ select:active, select:hover {
     height: 400px;
     border-radius: 50%;
     position:absolute;
-    margin-left: -20px;
+    margin-left: -0px;
     }
     #headerText {
     line-height: 28px;
