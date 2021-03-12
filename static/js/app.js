@@ -30,6 +30,13 @@ function buildCharts(sample) {
         console.log("940 out_labels: ", labels);
         let values = singleResult.sample_values;
         console.log("940 sample_values: ",values);
+        let datasets = data.metadata;
+        let metaArr = datasets.filter(metaObject=> metaObject.id == sample);
+        let singleDataset = metaArr[0]
+        console.log("940 metadata id: ", singleDataset);
+        let washFreq = singleDataset.wfreq;
+        console.log("single wfreq: ", washFreq);
+        
 
         // Draw a horizontal chart using plotly and the json data
 
@@ -93,6 +100,40 @@ function buildCharts(sample) {
         };
 
         Plotly.newPlot("bubble", [trace2], bubbleLayout);
+
+
+        // Gauge
+        let gauge = [
+            {
+                domain: { x: [0, 1], y: [0, 1] },
+                value: washFreq,
+                title: { text: "Belly Button Wash Per Week" },
+                type: "indicator",
+                mode: "gauge+number",
+                gauge: {
+                    axis: { range: [null, 9],tickwidth: 1, tickcolor: "darkblue" },
+                    bar: { color: "rgb(74, 132, 146)" },
+                    steps: [
+                        {range: [0, 1], color: "rgba(217,97,73,.3)" },
+                        {range: [1, 2], color: "rgba(217,97,73,.7)" },
+                        {range: [2, 3], color: "rgba(217,97,73,.3)" },
+                        {range: [3, 4], color: "rgba(217,97,73,.7)" },
+                        {range: [4, 5], color: "rgba(217,97,73,.3)" },
+                        {range: [5, 6], color: "rgba(217,97,73,.7)" },
+                        {range: [6, 7], color: "rgba(217,97,73,.3)" }, 
+                        {range: [7, 8], color: "rgba(217,97,73,.7)" }, 
+                        {range: [8, 9], color: "rgba(217,97,73,.3)" }
+                    ],
+                
+                },
+            },
+        ];
+        var gaugeLayout = { width: 400, 
+            height: 300, 
+            margin: { t: 0, b: 0 },
+            paper_bgcolor:'rgb(238, 238, 238)',
+        };
+        Plotly.newPlot('gauge', gauge, gaugeLayout);
     });
 }
 
