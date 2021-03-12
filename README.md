@@ -34,7 +34,7 @@ Lastly, for design elements, I included a [`style.css`](https://github.com/Kpear
 #### Visit the [Dashboard!](https://kpearson72.github.io/Belly-Button-Biodiversity-Dashboard/) 
 
 
-![screenshot of project](Images/kpearson72.github.io_Belly-Button-Biodiversity-Dashboard_(Laptop%20with%20HiDPI%20screen).png)
+![screenshot of project](Images/dashboard.png)
 
 ### About the Data
 
