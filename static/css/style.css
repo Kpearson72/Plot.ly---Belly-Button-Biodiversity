@@ -3,20 +3,20 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #gauge {
-    margin:0px 20px 50px 25px;
+    margin:0px 20px 50px -45px;
 }
 
 div .well {
-    margin-left: -98px;
+    margin-left: 30px;
 }
 
 #bar{
-    margin-left: -10px;
+    margin-left: 5px;
 }
 .panel {
     color:rgb(197,53,50,.7);
     font-size: 70%;
-    margin-left:-100px;
+    margin-left:30px;
 }
 
 .panel > .panel-heading {
