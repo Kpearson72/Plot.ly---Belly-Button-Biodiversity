@@ -2,7 +2,10 @@ body {
     background-color: rgb(74, 132, 146);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+#gauge {
+    margin:0 20px 50px 45px;
+    
+}
 .panel {
     color:rgb(197,53,50,.7);
     font-size: 70%;

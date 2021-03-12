@@ -61,7 +61,7 @@ function buildCharts(sample) {
         let barLayout = {
             title: "Top 10 Operational Taxonomic Units (OTU)",
             xaxis: {gridcolor: 'rgb(255,255,255)', gridwidth: 1.4},
-            margin: { t: 50, l: 100, b:50, r: 30},
+            margin: { t: 50, l: 100, b:50, r: 0},
             width: 600,
             height: 400,
             paper_bgcolor:'rgb(238, 238, 238)',
@@ -107,7 +107,7 @@ function buildCharts(sample) {
             {
                 domain: { x: [0, 1], y: [0, 1] },
                 value: washFreq,
-                title: { text: "Belly Button Wash Per Week" },
+                title: { text: "Belly Button Washes Per Week" },
                 type: "indicator",
                 mode: "gauge+number",
                 gauge: {
@@ -128,9 +128,10 @@ function buildCharts(sample) {
                 },
             },
         ];
-        var gaugeLayout = { width: 400, 
-            height: 300, 
-            margin: { t: 0, b: 0 },
+
+        var gaugeLayout = { width: 350, 
+            height: 250, 
+            margin: { t:20, b:0 , l:30, r:25},
             paper_bgcolor:'rgb(238, 238, 238)',
         };
         Plotly.newPlot('gauge', gauge, gaugeLayout);
